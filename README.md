@@ -1,5 +1,8 @@
 # Google Ads Android Quick Demo
 
+[![Build](https://github.com/verseboys/GoogleAdsAndroidQuickDemo/actions/workflows/build.yml/badge.svg)](https://github.com/verseboys/GoogleAdsAndroidQuickDemo/actions/workflows/build.yml)
+[![Release](https://github.com/verseboys/GoogleAdsAndroidQuickDemo/actions/workflows/release.yml/badge.svg)](https://github.com/verseboys/GoogleAdsAndroidQuickDemo/releases)
+
 一个简洁的 Android 单页 Demo，演示 Google AdMob 三种主要广告类型的集成。
 
 ## 📱 功能展示
@@ -65,6 +68,39 @@ app/
 ```gradle
 // Google Mobile Ads SDK
 implementation 'com.google.android.gms:play-services-ads:22.6.0'
+```
+
+## 🔄 CI/CD
+
+项目使用 GitHub Actions 自动构建和发布。
+
+### 自动构建 (CI)
+每次 push 到 `main`/`develop` 分支或 PR 时自动触发：
+- 构建 Debug APK
+- 构建 Release APK
+- 上传到 Artifacts (保留 7 天)
+
+### 自动发布 (CD)
+打 tag 时自动发布到 GitHub Releases：
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+### 配置签名 (可选)
+在仓库 Settings → Secrets 添加以下密钥以签名 Release APK：
+
+| Secret | 说明 |
+|--------|------|
+| `KEYSTORE_BASE64` | keystore 文件的 base64 编码 |
+| `KEYSTORE_PASSWORD` | keystore 密码 |
+| `KEY_ALIAS` | key 别名 |
+| `KEY_PASSWORD` | key 密码 |
+
+生成 base64：
+```bash
+base64 -i your-release.keystore | pbcopy  # macOS
+base64 your-release.keystore | xclip      # Linux
 ```
 
 ## 📚 参考文档
