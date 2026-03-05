@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Background circle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,54m-30,0a30,30 0,1 1,60 0a30,30 0,1 1,-60 0"/>
+    <!-- Dollar sign -->
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M54,38v-4h-2v4c-4,0.5 -7,3.5 -7,7.5c0,4 3,6.5 7,7.5v10c-2,-0.5 -4,-2 -5,-4l-2,1c1.5,3 4,5 7,5.5v4h2v-4c4,-0.5 7,-3.5 7,-7.5c0,-4 -3,-6.5 -7,-7.5v-10c2,0.5 4,2 5,4l2,-1c-1.5,-3 -4,-5 -7,-5.5zM49,45.5c0,-2.5 1.5,-4.5 3,-5v10c-2,-0.5 -3,-2.5 -3,-5zM56,64.5c-1.5,0.5 -3,-2.5 -3,-5v0c0,2.5 1.5,4.5 3,5v0zM56,59v-10c2,0.5 3,2.5 3,5s-1.5,4.5 -3,5z"/>
+</vector>
